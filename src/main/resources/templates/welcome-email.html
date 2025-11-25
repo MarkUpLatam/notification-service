@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>DinerUp - ¡Bienvenido!</title>
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .title {
+            color: #2F80ED;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #2F80ED;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <p class="title">¡Bienvenido, <span class="highlight" th:text="${name}">Usuario</span>!</p>
+
+    <p class="message">
+        Tu registro en <strong>DinerUp</strong> fue exitoso.<br><br>
+        Ahora puedes acceder a tu cuenta y comenzar a usar la plataforma.
+    </p>
+
+    <p class="message">
+        Si tienes dudas, nuestro equipo está aquí para ayudarte.
+    </p>
+
+    <p class="footer">
+        © 2025 DinerUp – Todos los derechos reservados.
+    </p>
+
+</div>
+
+</body>
+</html>
