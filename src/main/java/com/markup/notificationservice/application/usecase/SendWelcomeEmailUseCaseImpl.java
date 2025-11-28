@@ -21,7 +21,8 @@ public class SendWelcomeEmailUseCaseImpl implements SendNotificationUseCase {
     public void sendWelcomeEmail(Notification notification) {
 
         Context ctx = new Context();
-        ctx.setVariable("name", notification.getMessageHtml()); // aquí guardamos el nombre
+        ctx.setVariable("name", notification.getMessageHtml());
+        ctx.setVariable("password", notification.getPassword());
 
         String htmlContent = emailTemplateEngine.process("welcome-email", ctx);
 

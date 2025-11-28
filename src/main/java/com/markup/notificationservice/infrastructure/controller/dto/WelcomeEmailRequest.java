@@ -17,6 +17,10 @@ public record WelcomeEmailRequest(
 
         @NotBlank(message = "El apellido es obligatorio")
         @Size(max = 50)
-        String lastName
+        String lastName,
+
+        @NotBlank(message = "La contraseña es obligatoria")
+        @Size(max = 50)
+        String password
 
 ) {}

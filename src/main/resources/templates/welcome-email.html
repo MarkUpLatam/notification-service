@@ -43,6 +43,19 @@
             color: #2F80ED;
             font-weight: bold;
         }
+
+        .password-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f7ff;
+            border-left: 4px solid #2F80ED;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .password-box strong {
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -50,12 +63,32 @@
 
 <div class="container">
 
-    <p class="title">¡Bienvenido, <span class="highlight" th:text="${name}">Usuario</span>!</p>
+    <p class="title">
+        ¡Bienvenido, <span class="highlight" th:text="${name}">Usuario</span>!
+    </p>
 
     <p class="message">
-        Tu registro en <strong>DinerUp</strong> fue exitoso.<br><br>
-        Ahora puedes acceder a tu cuenta y comenzar a usar la plataforma.
+        Tu registro en <strong>DinerUp</strong> fue exitoso.
+        Ahora ya tienes acceso a nuestra plataforma.
     </p>
+
+    <p class="message">
+        Desde tu cuenta podrás:
+    </p>
+
+    <ul class="message">
+        <li>Consultar el estado de tus <strong>créditos</strong> o <strong>inversiones</strong>.</li>
+        <li>Revisar movimientos importantes.</li>
+        <li>Gestionar tu perfil y solicitudes.</li>
+    </ul>
+
+    <div class="password-box">
+        Tu contraseña generada es:
+        <br>
+        <strong th:text="${password}">*****</strong>
+        <br><br>
+        Te recomendamos cambiarla al iniciar sesión por primera vez.
+    </div>
 
     <p class="message">
         Si tienes dudas, nuestro equipo está aquí para ayudarte.

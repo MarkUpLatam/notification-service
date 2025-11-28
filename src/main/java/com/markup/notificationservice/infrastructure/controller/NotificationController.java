@@ -26,7 +26,8 @@ public class NotificationController {
         Notification notification = new Notification(
                 request.email(),
                 "Bienvenido a la plataforma",
-                "<h1>Hola " + request.firstName() + " " + request.lastName() + "!</h1>"
+                "<h1>Hola " + request.firstName() + " " + request.lastName() + "!</h1>",
+                request.password()
         );
 
         sendNotificationUseCase.sendWelcomeEmail(notification);
